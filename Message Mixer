@@ -1,1 +1,6 @@
 const { caesarCipher, symbolCipher, reverseCipher} = require('./encryptors.js');
+
+const encryptionMethod=getEncyptionMethod();
+process.stdin.on('data', (userInput)=>{
+  displayEncryptedMessage(encryptionMethod,userInput);
+});
